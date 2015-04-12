@@ -8,4 +8,4 @@
   (testing "Does the adder add?"
     (is (= 5 (core/adder 2 3))))
   (testing "and the not-adder?"
-    (is (not (= 5 (core/adder 2 3))))))
+    (is (not (= 5 (core/not-adder 2 3))))))

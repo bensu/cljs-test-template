@@ -4,7 +4,11 @@
 
 (enable-console-print!)
 
-(defn runner []
-  (if (successful? (run-tests '{{name}}.core-test))
-    0
-    1))
+(defn runner [] 
+  (tt/run-tests
+    (tt/empty-env ::tt/default)
+    '{{name}}.core-test))
+
+(defn ^:export set-print-fn! [f]
+  (set! cljs.core.*print-fn* f))
+

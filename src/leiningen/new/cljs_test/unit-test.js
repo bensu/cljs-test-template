@@ -50,9 +50,11 @@ p.open("file://" + workDir + "/" + pagePath, function (status) {
     };
 
     p.evaluate(function () {
-        goog.async.nextTick.setImmediate_ = function(funcToCall) {
-            return window.setTimeout(funcToCall, 0);
-        };
+        if (goog.async != undefined) {
+            goog.async.nextTick.setImmediate_ = function(funcToCall) {
+                return window.setTimeout(funcToCall, 0);
+            };
+        }
 	test.test_runner.set_print_fn_BANG_(function(x) {
 	    // using callPhantom to work around https://github.com/laurentj/slimerjs/issues/223
 	    window.callPhantom(x.replace(/\n/g, "[NEWLINE]")); // since console.log *itself* adds a newline

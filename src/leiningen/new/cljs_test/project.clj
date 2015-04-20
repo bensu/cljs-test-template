@@ -24,7 +24,7 @@
                         :source-paths ["src" "test"]
                         :notify-command ["phantomjs"
                                          "vendor/test/unit-test.js"
-                                         "vendor/test/phantomjs-shim.js"
+                                         "vendor/test/phantomjs-shims.js"
                                          "target/testable.js"]
                         :compiler {:output-to "target/testable.js"
                                    :optimizations :whitespace

@@ -1,5 +1,5 @@
 (ns test.test-runner
-  (:require [cljs.test :refer [successful?] :refer-macros [run-tests]]
+  (:require [cljs.test :as tt]
             [{{name}}.core-test]))
 
 (enable-console-print!)

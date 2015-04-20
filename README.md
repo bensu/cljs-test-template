@@ -4,7 +4,7 @@ A Leiningen template to start testing ClojureScript apps.
 
 ## Usage
 
-    lein new cljs-test hello-world --snapshot 
+    lein new cljs-test hello-world
 
 ## Next Steps
 

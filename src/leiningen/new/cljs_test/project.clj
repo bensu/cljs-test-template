@@ -15,7 +15,7 @@
                         :source-paths ["src" "test"]
                         :notify-command ["slimerjs"
                                          "vendor/test/unit-test.js"
-                                         "vendor/test/unit-test.html"]
+                                         "target/testable.js"]
                         :compiler {:output-to "target/testable.js"
                                    :optimizations :whitespace
                                    :cache-analysis false
@@ -24,7 +24,8 @@
                         :source-paths ["src" "test"]
                         :notify-command ["phantomjs"
                                          "vendor/test/unit-test.js"
-                                         "vendor/test/unit-test.html"]
+                                         "vendor/test/phantomjs-shim.js"
+                                         "target/testable.js"]
                         :compiler {:output-to "target/testable.js"
                                    :optimizations :whitespace
                                    :cache-analysis false

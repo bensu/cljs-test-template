@@ -34,7 +34,7 @@ If you want to run tests once:
 or if the file is already compiled you can call the runners directly:
 
     slimerjs vendor/test/unit-test.js target/testable.js 
-    phantomjs vendor/test/unit-test.js vendor/test/phantomjs-shim.js target/testable.js 
+    phantomjs vendor/test/unit-test.js vendor/test/phantomjs-shims.js target/testable.js 
 
 ## Feedback
 

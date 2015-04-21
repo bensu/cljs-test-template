@@ -13,10 +13,10 @@ A Leiningen template to start testing ClojureScript apps.
 
 ## Running the tests inside the template
 
-Note: auto is not currently working. cljs.test doesn't have a
+*Note: auto is not currently working. cljs.test doesn't have a
 `on-test-done` hook, so it is hard to determine when did the async
 test ended. You can disable the `notify-command` in `project.clj` and
-run the tests manually.
+run the tests manually.*
 
 To run the tests on auto compile:
 

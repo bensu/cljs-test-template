@@ -50,7 +50,7 @@ p.open("file://" + workDir + "/" + pagePath, function (status) {
     };
 
     p.evaluate(function () {
-        if (goog.async != undefined) {
+        if ((goog.async != undefined) && (slimer != undefined)) {
             goog.async.nextTick.setImmediate_ = function(funcToCall) {
                 return window.setTimeout(funcToCall, 0);
             };
@@ -70,8 +70,6 @@ p.open("file://" + workDir + "/" + pagePath, function (status) {
     };
 
     p.evaluate(function (exitCodePrefix) {
-	// var results = cemerick.cljs.test.run_all_tests();
-	//console.log(results);
 	// cemerick.cljs.test.on_testing_complete(results, function () {
 	//     window.alert(exitCodePrefix +
 	// 		 (cemerick.cljs.test.successful_QMARK_(results) ? 0 : 1));
